@@ -1,0 +1,473 @@
+.logo{
+    position: absolute;
+    top: 30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fff;
+        color: #222;
+    }
+
+    /* Header */
+    .header {
+        padding: 20px 24px;
+        border-bottom: 1px solid #e0e0e0;
+        background: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
+        height: 70px;
+    }
+
+    .logo {
+        color: #ff385c;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        bottom: 40px;
+        left: 400px;
+    }
+        
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #222;
+        font-weight: 500;
+        padding: 8px 12px;
+        border-radius: 20px;
+        transition: background-color 0.2s;
+    }
+
+        .nav-item:hover {
+            background-color:rgb(240, 238, 238) ;
+        }
+
+        .nav-item.active {
+            border-bottom: 2px solid #222;
+            border-radius: 0;
+        }
+
+        .nav-badge {
+            background: #ff385c;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .become-host {
+            position: absolute;
+            color: #222;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background-color 0.2s;
+            left: 1050px;
+            top: 30px
+        }
+        .become-host:hover {
+            background-color: rgb(240, 238, 238);
+        }
+        .globe{
+            position:absolute ;
+            width: 40px;
+            top: 30px;
+            left:1200px;
+            height: 40px;
+            border-radius: 19px;
+            padding: 10px;
+
+        }
+        .globe:hover{
+            background-color: rgb(240, 238, 238);
+        }
+        .menu{
+            position: absolute;
+            width: 40px;
+            top: 29px;
+            left: 1240px;
+            height: 40px;
+            border-radius: 19px;
+            padding: 10px;
+        }
+        .menu:hover{
+             background-color: rgb(240, 238, 238);
+        }
+
+        
+
+        /* Search Section */
+        .search-section {
+            padding: 40px 24px 60px;
+            color: white;
+        }
+
+        .search-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .search-bar {
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .search-field {
+            flex: 1;
+            padding: 16px 24px;
+            border: none;
+            outline: none;
+            min-height: 56px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .search-field:last-of-type {
+            border-right: none;
+        }
+
+        .search-field label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2px;
+        }
+
+        .search-field input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: #717171;
+            width: 100%;
+            background: transparent;
+        }
+
+        .search-field input::placeholder {
+            color: #717171;
+        }
+
+        .search-button {
+            background: #ff385c;
+            border: none;
+            padding: 16px;
+            margin: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 48px;
+            min-height: 48px;
+        }
+
+        .search-button:hover {
+            background: #e31c5f;
+        }
+
+        .search-icon {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+        .line{
+            background-color: #e7e6e6;
+            border:none;
+            height: 1px;
+        }
+
+        /* Popular Homes Section */
+        .popular-section {
+            padding: 60px 24px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .nav-arrow {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .nav-arrow:hover {
+            border-color: #222;
+            transform: scale(1.05);
+        }
+
+        .homes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .home-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: ;
+            cursor: pointer;
+            transition: transform 0.2s;
+            height: px;
+        }
+
+        .home-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .home-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 7px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .favorite-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .guest-favourite {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: white;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .home-details {
+            padding: 12px 0;
+        }
+
+        .home-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 4px;
+        }
+
+        .home-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 14px;
+            color: #717171;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .star {
+            width: 12px;
+            height: 12px;
+            fill: #222;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 16px;
+            }
+            
+            .homes-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            .rightmostbutt{
+                position: absolute;
+                left: -300px;
+                top: -3px;
+            }
+            .nav-menu{
+                left: 200px;
+            }
+            .become-host{
+                width: 137px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 16px 20px;
+            }
+            .nav-container{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .logo{
+                left: 20px;
+            }
+            .globe{
+                top:27px ;
+                left: 970px;
+            }
+            .menu{
+                top:27px;
+                left: 1010px;
+            }
+            .become-host{
+                display: none;
+            }
+            .search-section {
+                padding: 30px 20px 40px;
+                width: 600px;
+                text-align: center;
+                top: 30px;
+                margin: 0 auto;
+            }
+
+            .search-bar {
+                border-radius: 16px;
+            }
+            .line {
+                height: 0p;
+            }
+
+            .search-field {
+                border-right: none;
+                padding: 12px 20px;
+                min-height: auto;
+                border-radius: 100px;
+            }
+
+            .search-field:last-of-type {
+                border-bottom: none;
+            }
+
+            .search-button {
+                margin: 12px;
+                align-self: flex-end;
+            }
+
+            .popular-section {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .homes-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+            }
+
+            .home-image {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-section {
+                padding: 20px 16px 30px;
+                width: 390px;
+            }
+
+            .popular-section {
+                padding: 30px 16px;
+            }
+
+            .homes-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .home-image {
+                height: 160px;
+            }
+
+            .home-title {
+                font-size: 14px;
+            }
+
+            .price, .rating {
+                font-size: 12px;
+            }
+            .nav-menu{
+                display: none;  
+            }
+            .globe{
+                left:600px
+            }
+            .menu{
+                left: 650px
+            }
+    }
